@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sattim.DataAccess\Sattim.DataAccess.csproj" />
+    <ProjectReference Include="..\Sattim.Entities\Sattim.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

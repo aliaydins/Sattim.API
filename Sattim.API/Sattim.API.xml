@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sattim.API</name>
+    </assembly>
+    <members>
+        <member name="M:Sattim.API.Controllers.OfferController.Get">
+            <summary>
+            Tüm teklifleri döndürür. /api/offer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.GetById(System.Int32)">
+            <summary>
+            {offerId} parametresine göre değer döndürür 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.GetWonOffer(System.Int32)">
+            <summary>
+            Kullanıcının kazandığı ihaleleri döndürür parametre {userId} değeridir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.GetLoseOffer(System.Int32)">
+            <summary>
+            Kullanıcının kaybettiği ihaleleri döndürür parametre {userId} değeridir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.GetOfferDesc(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Kullanıcıya ait ürünlerin listesini döndürür. Parametre olarak  {userId:int , productId:int} 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.Post(Sattim.Entities.Offer)">
+            <summary>
+            Teklif eklenir eğer kullanıcının bakiyesi teklifden küçük ise "bakiye yetersiz" bilgisi döner.
+            </summary>
+            <param name="offer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.Put(Sattim.Entities.Offer)">
+            <summary>
+            Teklif güncellenir /api/Offer
+            </summary>
+            <param name="offer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.OfferController.Delete(System.Int32)">
+            <summary>
+            Mevcut bir teklif id'ye göre silinir 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.Get">
+            <summary>
+            Tüm resim bilgilerini döndürür.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.GetById(System.Int32)">
+            <summary>
+            pictureId parametresine göre resimi döndürür.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.GetByProductId(System.Int32)">
+            <summary>
+            ProductId ye göre tüm resimleri listeler
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.Put(Sattim.Entities.Picture)">
+            <summary>
+            Mevcut resim bilgisini güncelleme
+            </summary>
+            <param name="picture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.Delete(System.Int32)">
+            <summary>
+            Mevcut bir resimi  pictureId değerine göre silinmesi.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.DeleteByProductId(System.Int32)">
+            <summary>
+            ProductId ye göre tüm resimleri siler.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.Image(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile})">
+            <summary>
+            Yeniden bir ürün eklerken kullanılacak url
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.Image(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile},System.Int32)">
+            <summary>
+            productId ye gore resım ekleme 
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.PictureController.testImage(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile},System.Int32)">
+            <summary>
+            denemelik resim ekleme 
+            </summary>
+            <param name="files"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.Get">
+            <summary>
+            Satılmamış ve 24 saati geçmemiş tüm ürünleri listeler
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.Get(System.Int32)">
+            <summary>
+            productId değerine göre ürünü döndürür.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.GetMyProduct(System.Int32)">
+            <summary>
+            Kullanıcıya ait ürünleri döndürür. {userId} parametresini alır.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.GetByCategory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Category değerine göre filtreleme yapar  {productCategory:"Elektronik"} parametresini alır.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.Post(Sattim.Entities.Product)">
+            <summary>
+            Yeni Ürün ekleme  productId değeri otomatik increase olduğundan eklemeye gerek yoktur.
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.Delete(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Mevcut ürünü siler parametre olarak {userId, productId} gönderilmesi gerekir.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.Put(Sattim.Entities.Product)">
+            <summary>
+            Mevcut ürünü güncelleme 
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.ProductController.UpdateisSell(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Ürün satışını ürün sahibi onaylaması parametre olarak {userId,ProductId,offerId} alır  ve Product Offer tablolarını günceller.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Get">
+            <summary>
+            Tüm kullanıcıları döndürür.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            userId değerine göre kullanıcı mevcut ise döndürür.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Login(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            userEmail ve userPassword parametrelerini database'de kontrol eder mevcut ise //200 döndürür.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Post(Sattim.Entities.User)">
+            <summary>
+            Yeni kullanıcı oluşturur. userId değeri otomatik increase olduğu için eklemeye gerek yok.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Put(Sattim.Entities.User)">
+            <summary>
+            Kullanıcı bilgileri update
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            userId değerine göre kullanıcı mevcut ise silinir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.UpdateBank(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            userId değerine göre kullanıcıya bakiye eklemesi yapılır {userId, userBank} parametreleri alır.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.ChangePass(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Kullanıcı şifresinin güncellenmesi. {userEmail, userPassword} parametrelerini alır.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sattim.API.Controllers.UserController.UpdateUserInfo(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Kullanıcı bilgilerinin güncellenmesi {userName, userSurname } parametrelerini alır. 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
